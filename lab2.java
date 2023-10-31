@@ -1,3 +1,4 @@
+/*
 import java.util.ArrayList;
 
 class Author {
@@ -146,3 +147,4 @@ public class lab2 {
         scOneOne.print();
     }
 }
+*/
