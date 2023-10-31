@@ -1,3 +1,4 @@
+/*
 import java.util.ArrayList;
 
 //e1
@@ -147,3 +148,4 @@ public class lab2 {
         scOneOne.print();
     }
 }
+*/
