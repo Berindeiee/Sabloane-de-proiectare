@@ -21,6 +21,7 @@ class Book implements Element {
     @Override
     public void print() {
         System.out.println("Book: " + title);
+        System.out.println("Authors:");
         if (authors != null) {
             for (Author author : authors) {
                 author.print();
