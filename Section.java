@@ -9,6 +9,10 @@ class Section implements Element {
     }
 
     @Override
+    public void addContent(Element e) {
+        children.add(e);
+    }
+
     public void add(Element e) {
         children.add(e);
     }

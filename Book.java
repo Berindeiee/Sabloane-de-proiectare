@@ -14,7 +14,7 @@ class Book implements Element {
     }
 
     @Override
-    public void add(Element e) {
+    public void addContent(Element e) {
         contents.add(e);
     }
 
