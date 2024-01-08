@@ -17,8 +17,8 @@ public class Paragraph implements Element {
     }
 
     @Override
-    public void addContent(Element e) {
-        this.addContent(e);
+    public void add(Element e) {
+        this.add(e);
     }
 
     @Override
@@ -34,5 +34,10 @@ public class Paragraph implements Element {
 
     public void setAlignStrategy(AlignStrategy alignStrategy) {
         this.alignStrategy = alignStrategy;
+    }
+
+    @Override
+    public void accept(Visitor v) {
+        v.visitParagraph(this);
     }
 }

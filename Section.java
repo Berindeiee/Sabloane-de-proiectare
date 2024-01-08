@@ -1,18 +1,34 @@
 import java.util.ArrayList;
 import java.util.List;
-class Section implements Element {
-    private String title;
-    private List<Element> children = new ArrayList<>();
+
+public class Section implements Element{
+    protected String title;
+
+    protected List<Element> children = new ArrayList<>();
+
+    public Section() {}
 
     public Section(String title) {
         this.title = title;
     }
 
-    @Override
-    public void addContent(Element e) {
-        children.add(e);
+    public String getTitle() {
+        return title;
     }
 
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
+    public List<Element> getChildren() {
+        return children;
+    }
+
+    public void setChildren(List<Element> children) {
+        this.children = children;
+    }
+
+    @Override
     public void add(Element e) {
         children.add(e);
     }
@@ -29,9 +45,17 @@ class Section implements Element {
 
     @Override
     public void print() {
-        System.out.println("Section: " + title);
-        for (Element child : children) {
-            child.print();
+        System.out.println(title);
+//        for (Element child : children) {
+//            child.print();
+//        }
+    }
+
+    @Override
+    public void accept(Visitor v) {
+        v.visitSection(this);
+        for (Element e: children){
+            e.accept(v);
         }
     }
 }

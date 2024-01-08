@@ -1,13 +1,13 @@
-public class Table implements Element {
-    private String title;
+import java.util.List;
 
-    public Table(String title) {
-        this.title = title;
-    }
+public class TableOfContents implements Element{
 
-    @Override
+    private List<String> elements;
+
     public void print() {
-        System.out.println("Table: " + title);
+        System.out.println("Table of contents");
+        for (String e: elements)
+        System.out.println(e);
     }
 
     @Override
@@ -27,6 +27,6 @@ public class Table implements Element {
 
     @Override
     public void accept(Visitor v) {
-        v.visitTable(this);
+        v.visitTableOfContents(this);
     }
 }

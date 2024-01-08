@@ -1,12 +1,8 @@
-import java.util.concurrent.TimeUnit;
+public class Image implements Element {
+    private String imageName;
 
-class Image implements Element {
-    private String url;
-    private boolean isLoaded = false;
-
-    public Image(String url) {
-        this.url = url;
-        this.isLoaded = false;
+    public Image(String name) {
+        imageName = name;
         try {
             TimeUnit.SECONDS.sleep(5);
         } catch (InterruptedException e) {
@@ -16,14 +12,27 @@ class Image implements Element {
 
     @Override
     public void print() {
-        if (!isLoaded) {
-            load();
-        }
-        System.out.println("Image: " + url);
+        System.out.println("Image: " + imageName);
     }
-    
-    private void load() {
-        // Logica pentru încărcarea imaginii din fișier
-        isLoaded = true;
+
+    @Override
+    public void add(Element e) {
+        this.add(e);
+    }
+
+    @Override
+    public void remove(Element e) {
+        this.remove(e);
+    }
+
+    @Override
+    public Element get(int index) {
+        return this.get(index);
+    }
+
+    @Override
+    public void accept(Visitor v) {
+        v.visitImage(this);
     }
 }
+
