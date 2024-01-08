@@ -1,5 +1,5 @@
 import java.util.List;
-
+import services.Visitor;
 public class TableOfContents implements Element{
 
     private List<String> elements;

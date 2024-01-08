@@ -1,3 +1,5 @@
+import services.Visitor;
+
 public class Table implements Element {
     private String title;
 

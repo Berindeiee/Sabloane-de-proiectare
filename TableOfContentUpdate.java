@@ -1,3 +1,5 @@
+import services.Visitor;
+
 public class TableOfContentUpdate implements Visitor {
 
     TableOfContents table;

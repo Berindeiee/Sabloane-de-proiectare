@@ -1,3 +1,4 @@
+import services.Visitor;
 public interface Element  {
 
     void print();

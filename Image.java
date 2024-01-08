@@ -1,3 +1,5 @@
+import services.Visitor;
+
 public class Image implements Element {
     private String imageName;
 

@@ -1,3 +1,5 @@
+import services.AlignStrategy;
+import services.Visitor;
 public class Paragraph implements Element {
     private String text;
 

@@ -1,3 +1,5 @@
+import services.Visitor;
+
 public class ImageProxy implements Element{
     private String url;
     private Dimension dim;
